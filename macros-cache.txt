@@ -4,6 +4,14 @@ END
 VER 3 0000000000000015 " auto-shoot" "135493"
 /cast !Auto Shot
 END
+VER 3 0000000000000051 " mount-example" "134400"
+#showtooltip
+/cancelaura Bloodrage
+/cancelaura Bladestorm
+/use Red Qiraji Resonating Crystal
+/use Horn of the Frostwolf Howler
+/run UIErrorsFrame:Clear()
+END
 VER 3 0000000000000049 " mouse-speed" "134400"
 /console SET cameraYawMoveSpeed 40
 /console SET cameraPitchMoveSpeed 40
@@ -17,6 +25,9 @@ END
 VER 3 0000000000000017 " petfollow" "132328"
 /petpassive
 /petfollow
+END
+VER 3 0000000000000050 " reset-inst" "132096"
+/script ResetInstances();
 END
 VER 3 0000000000000007 " shoot" "134400"
 #showtooltip
@@ -69,9 +80,6 @@ VER 3 0000000000000033 "lock-demonskill" "134400"
 /cast [pet:felhunter] Spell Lock
 /cast [pet:succubus] Seduction
 END
-VER 3 0000000000000050 "RESET INST" "132096"
-/script ResetInstances();
-END
 VER 3 000000000000003C "rog-ambush" "132282"
 #showtooltip Ambush
 /cast Pick Pocket
@@ -113,9 +121,6 @@ VER 3 0000000000000039 "rog-stealth" "134400"
 #showtooltip
 /cast [nocombat, nostealth] Stealth; Gouge
 END
-VER 3 0000000000000048 "vendorbuy" "133652"
-/script local f=CreateFrame("FRAME");f:RegisterEvent("MERCHANT_SHOW");f:SetScript("OnEvent",function(s, e, ...) for i=1,31 do local l=GetMerchantItemLink(i);if l and l:find("Pattern: Runecloth Bag") then BuyMerchantItem(i,1);end end CloseMerchant();end);
-END
 VER 3 0000000000000010 "warr-aoetaunt" "134400"
 #showtooltip
 /cast Challenging Shout
@@ -135,10 +140,6 @@ VER 3 000000000000004C "warr-bt" "134400"
 /use Anti-Venom
 /use Powerful Anti-Venom
 /use Jungle Remedy
-END
-VER 3 000000000000001D "warr-cancelaura" "134400"
-/cancelaura Bloodrage
-/cancelaura Bladestorm
 END
 VER 3 000000000000002D "warr-charge" "134400"
 #showtooltip Charge
