@@ -1,0 +1,313 @@
+VER 3 0000000000000001 " attack" "135274"
+/startattack
+END
+VER 3 0000000000000015 " auto-shoot" "135493"
+/cast !Auto Shot
+END
+VER 3 0000000000000065 " confirm" "134400"
+/click StaticPopup1Button1 
+END
+VER 3 000000000000005A " desync" "132283"
+/cleartarget
+/targetlasttarget
+/startattack
+END
+VER 3 0000000000000055 " elune" "134400"
+#showtooltip
+/stopcasting
+/use Light of Elune
+/use Hearthstone
+END
+VER 3 0000000000000064 " enchant" "134400"
+/click CraftCreateButton
+/use Crystalheart Pulse-Staff
+/click StaticPopup1Button1 
+END
+VER 3 0000000000000051 " mount-example" "134400"
+#showtooltip
+/cancelaura Bloodrage
+/cancelaura Bladestorm
+/use [nooutdoors] Red Qiraji Resonating Crystal; Horn of the Frostwolf Howler
+END
+VER 3 0000000000000049 " mouse-speed" "134400"
+/console SET cameraYawMoveSpeed 40
+/console SET cameraPitchMoveSpeed 40
+END
+VER 3 0000000000000016 " petattack" "132152"
+/petdefensive
+/petautocaston [nogroup] Torment
+/petautocaston [nogroup] Growl
+/petattack [@mouseover, harm][]
+END
+VER 3 0000000000000017 " petfollow" "132328"
+/petpassive
+/petfollow
+END
+VER 3 0000000000000050 " reset-inst" "132096"
+/script ResetInstances();
+END
+VER 3 0000000000000056 " shoot" "134400"
+#showtooltip
+/cast [worn:Thrown] Throw; Shoot
+END
+VER 3 0000000000000066 " snipe-npc-items" "134400"
+/script local f=CreateFrame("FRAME");f:RegisterEvent("MERCHANT_SHOW");f:SetScript("OnEvent",function(s, e, ...) for i=1,61 do local l=GetMerchantItemLink(i);if l and l:find("Superior Defense") then BuyMerchantItem(i,1);end end CloseMerchant();end)
+END
+VER 3 000000000000001B " stone-example" "135249"
+#showtooltip
+/use Coarse Sharpening Stone
+/use [button:1] 16; [button:2] 17
+END
+VER 3 000000000000006C " tainted core" "136030"
+#showtooltip Tainted Core
+/use Tainted Core
+/y <------- TAINTED CORE TO %t !!! 
+/run local t=UnitName("target"); if t then SendChatMessage("!!! YOU HAVE THE CORE !!!","WHISPER",nil,t) end
+END
+VER 3 0000000000000054 " train" "135737"
+/train
+END
+VER 3 0000000000000044 " trinket1" "134400"
+#showtooltip
+/use 13
+END
+VER 3 0000000000000045 " trinket2" "134400"
+#showtooltip
+/use 14
+END
+VER 3 000000000000000A " wand" "135139"
+/cast !Shoot
+END
+VER 3 0000000000000063 "Decursive" "INV_MISC_QUESTIONMARK"
+/stopcasting
+/cast [@mouseover,nomod,exists] Remove Curse;  [@mouseover,exists,mod:ctrl] Abolish Poison; [@mouseover,exists,mod:shift] Remove Curse
+END
+VER 3 0000000000000069 "druid-cancelform" "136116"
+/cancelform
+END
+VER 3 0000000000000037 "druid-powershift" "132279"
+/cast [form:1] !Dire Bear Form; [form:2] !Aquatic Form [form:3] !Cat Form; [form:4] !Travel Form; [form:6] !Tree of Life;
+END
+VER 3 0000000000000031 "druid-ravage" "134400"
+#showtooltip
+/cast [stealth] Ravage; Shred
+END
+VER 3 0000000000000030 "druid-travel" "134400"
+#showtooltip
+/cast [swimming] Aquatic Form; [flyable,nocombat] Flight Form; Travel Form
+END
+VER 3 0000000000000033 "lock-demonskill" "134400"
+#showtooltip
+/cast [pet:voidwalker] Sacrifice
+/cast [pet:imp] Fire Shield
+/cast [pet:felhunter] Spell Lock
+/cast [pet:succubus] Seduction
+END
+VER 3 0000000000000068 "ReplusDrink" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use item:34062
+END
+VER 3 0000000000000067 "ReplusFood" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use item:34062
+END
+VER 3 000000000000006A "ReplusHS" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/use item:22105
+/use item:22105
+/use item:22104
+/use item:22103
+END
+VER 3 000000000000003C "rog-ambush" "132282"
+#showtooltip Ambush
+/cast Pick Pocket
+/cast Ambush
+END
+VER 3 000000000000003D "rog-garrote" "132297"
+#showtooltip Garrote
+/cast Pick Pocket
+/cast Garrote
+END
+VER 3 0000000000000040 "rog-riposte" "134400"
+#showtooltip
+/startattack
+/cast Riposte
+END
+VER 3 000000000000004D "rog-sap" "134400"
+#showtooltip Sap
+/cast Pick Pocket
+/cast Sap
+END
+VER 3 0000000000000038 "rog-ss" "136189"
+#showtooltip Sinister Strike
+/cast Pick Pocket
+/startattack
+/cast Riposte
+/cast Sinister Strike
+END
+VER 3 0000000000000039 "rog-stealth" "134400"
+#showtooltip
+/cast [nocombat, nostealth] Stealth; Gouge
+END
+VER 3 0000000000000052 "RXPTargeting" "Ability_eyeoftheowl"
+/targetexact Gnomus
+/targetlasttarget [dead]
+END
+VER 3 000000000000005E "sham-earthshock" "134400"
+#showtooltip
+/startattack
+/cast Earth Shock
+END
+VER 3 000000000000005D "sham-flameshock" "134400"
+#showtooltip
+/startattack
+/cast Flame Shock
+END
+VER 3 0000000000000018 "warr-bigcd" "134400"
+#showtooltip
+/cast [stance:1] Retaliation
+/cast [stance:2] Shield Wall
+/cast [stance:3] Recklessness
+END
+VER 3 000000000000004C "warr-bt" "134400"
+#showtooltip
+/startattack
+/cast Bloodthirst
+END
+VER 3 000000000000002D "warr-charge" "134400"
+#showtooltip Charge
+/startattack
+/cast [nocombat] Battle Stance
+/cast [nocombat] Charge; Hamstring
+END
+VER 3 0000000000000023 "warr-cleave" "134400"
+#showtooltip
+/cast Cleave
+/startattack
+END
+VER 3 0000000000000053 "warr-demo" "134400"
+#showtooltip
+/startattack
+/cast Demoralizing Shout
+END
+VER 3 0000000000000024 "warr-devastate" "134400"
+#showtooltip
+/startattack
+/cast Devastate
+END
+VER 3 000000000000001E "warr-disarm" "134400"
+#showtooltip Disarm
+/startattack
+/cast Defensive Stance
+/cast Disarm
+END
+VER 3 000000000000001F "warr-execute" "134400"
+#showtooltip
+/startattack
+/cast Execute
+END
+VER 3 000000000000003A "warr-hms" "134400"
+#showtooltip
+/startattack
+/cast Hamstring
+END
+VER 3 0000000000000022 "warr-hs" "134400"
+#showtooltip
+/cast Heroic Strike
+/startattack
+END
+VER 3 000000000000002C "warr-intercept" "134400"
+#showtooltip Intercept
+/startattack
+/cast Berserker Stance
+/cast Intercept
+END
+VER 3 000000000000006D "warr-intervene" "134400"
+#showtooltip Intervene
+/cast [help] Defensive Stance
+/cast [help] Intervene
+/stopmacro [noharm]
+/cleartarget
+/targetlasttarget
+/startattack
+END
+VER 3 000000000000003E "warr-kick" "134400"
+#showtooltip [worn:Shields] Shield Bash; Pummel
+/startattack
+/cast [form:1/2, worn:Shields] Shield Bash
+/cast [noworn:Shields] Berserker Stance
+/cast Pummel
+END
+VER 3 000000000000002B "warr-mockblow" "134400"
+#showtooltip Mocking Blow
+/startattack
+/cast Battle Stance
+/cast Mocking Blow
+END
+VER 3 0000000000000043 "warr-ms" "134400"
+#showtooltip
+/startattack
+/cast Mortal Strike
+END
+VER 3 000000000000002E "warr-op" "134400"
+#showtooltip [stance:2] Mocking Blow; Overpower
+/startattack
+/cast Battle Stance
+/cast [stance:2] Mocking Blow; Overpower
+END
+VER 3 0000000000000034 "warr-rend" "134400"
+#showtooltip Rend
+/startattack
+/cast [stance: 3] Battle Stance
+/cast Rend
+END
+VER 3 000000000000002A "warr-revenge" "134400"
+#showtooltip
+/startattack
+/cast Revenge
+END
+VER 3 0000000000000060 "warr-shieldslam" "134400"
+#showtooltip
+/cancelaura Blessing of Salvation
+/cancelaura Greater Blessing of Salvation
+/startattack
+/cast [worn:Shields] Shield Slam; Devastate
+END
+VER 3 000000000000004F "warr-slam" "134400"
+#showtooltip
+/startattack
+/cast Slam
+END
+VER 3 0000000000000028 "warr-ss" "134400"
+#showtooltip Sweeping Strikes
+/startattack
+/cast [stance:2] Battle Stance
+/cast Sweeping Strikes
+END
+VER 3 000000000000006B "warr-sunder" "134400"
+#showtooltip
+/startattack
+/cast Sunder Armor
+END
+VER 3 0000000000000025 "warr-thunderclap" "134400"
+#showtooltip Thunder Clap
+/startattack
+/cast [stance:3] Battle Stance
+/cast Thunder Clap
+END
+VER 3 000000000000005F "warr-vrush" "134400"
+#showtooltip
+/startattack
+/cast Victory Rush
+END
+VER 3 0000000000000026 "warr-ww" "134400"
+#showtooltip
+/startattack
+/cast [noform:3] Berserker Stance; Whirlwind
+END
+VER 3 0000000000000027 "warr-zerkrage" "134400"
+#showtooltip Berserker Rage
+/cast Berserker Stance
+/cast Berserker Rage
+END
