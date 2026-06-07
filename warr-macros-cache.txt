@@ -1,0 +1,72 @@
+VER 3 0100000000000003 " dw" "132147"
+/equipset dw
+END
+VER 3 0100000000000002 " snb" "132341"
+/equipset snb
+END
+VER 3 0100000000000012 "dwish" "134400"
+#showtooltip
+/use Death Wish
+/use Bloodlust Brooch
+/stopmacro [nogroup:raid]
+/use Flame Cap
+END
+VER 3 0100000000000014 "haste" "134400"
+#showtooltip
+/use Haste Potion
+/use Insane Strength Potion
+/use Bloodlust Brooch
+/use Flame Cap
+/use Goblin Sapper Charge
+/use Super Sapper Charge
+END
+VER 3 0100000000000005 "mount" "134400"
+#showtooltip
+/cancelaura Bladestorm
+/cancelaura Blessing of Protection
+/use Ebon Gryphon
+/use Stormpike Battle Charger
+END
+VER 3 0100000000000013 "reck" "134400"
+#showtooltip
+/use Recklessness
+/use Bloodlust Brooch
+/stopmacro [nogroup:raid]
+/use Haste Potion
+/use Insane Strength Potion
+/use Flame Cap
+END
+VER 3 0100000000000008 "report afk" "136072"
+/ra lots of ppl afk, type "/afk list" and report them please
+END
+VER 3 0100000000000009 "shout" "134400"
+#showtooltip
+/cast Battle Shout
+/cast [group:raid] Commanding Shout; [spec:1] Battle Shout; Commanding Shout
+END
+VER 3 0100000000000011 "spell reflect" "134400"
+#showtooltip Spell Reflection
+/equipset snb
+/cast [stance:3] Battle Stance
+/cast Spell Reflection
+END
+VER 3 0100000000000001 "stone1" "134400"
+#showtooltip
+/use Dense Sharpening Stone
+/use [button:1] 16; [button:2] 17
+END
+VER 3 010000000000000A "stone2" "134400"
+#showtooltip
+/use Adamantite Sharpening Stone
+/use [button:1] 16; [button:2] 17
+END
+VER 3 0100000000000010 "TAR" "135862"
+/tar water elemental totem
+/tar spitfire totem
+END
+VER 3 0100000000000004 "thanks" "135977"
+/ty
+END
+VER 3 0100000000000007 "WF MISS" "136018"
+/p >> WINDFURY MISSING <<
+END
